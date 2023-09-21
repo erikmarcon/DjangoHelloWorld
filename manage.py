@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
+
+# Tutorial
+# https://www.youtube.com/watch?v=t10QcFx7d5k
+
+
 import os
 import sys
 

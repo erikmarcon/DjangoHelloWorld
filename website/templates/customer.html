@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card" style="width: 22rem;">
+  <h5 class="card-header"> <strong> {{ customer_record.property }} </strong> </h5>
+  <div class="card-body">
+    <h5 class="card-title">{{ customer_record.first_name }} {{ customer_record.last_name }}</h5>
+    <p class="card-text">
+      <strong>Email:</strong> {{ customer_record.email }} <br/>
+      <strong>Telefone:</strong> {{ customer_record.phone }} <br/>
+      <strong>Endereço:</strong> {{ customer_record.address }} <br/>
+      <strong>Cidade:</strong> {{ customer_record.city }} <br/>
+      <strong>Estado:</strong> {{ customer_record.state }} <br/>
+      <strong>CEP:</strong> {{ customer_record.zipcode }} <br/>
+      <strong>ID:</strong> {{ customer_record.id }} <br/>
+      <strong>Registro:</strong> {{ customer_record.created_at }} <br/>
+    </p>
+    <a href="{% url 'home' %}" class="btn btn-primary" style="margin-right:20px">Alterar</a>
+    <a href="{% url 'delete' customer_record.id %}" class="btn btn-danger" onclick="return confirm('Tem certeza?')"  >Deletar</a>
+  </div>
+</div>
+
+<br/>
+<a href="{% url 'home' %}" class="btn btn-secondary">Página Inicial</a>
+
+
+{% endblock %}

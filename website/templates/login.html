@@ -2,11 +2,9 @@
 
 {% block content %}
 
-<div class="col-md-6 offset-md-1">
-
 {% if user.is_authenticated %}
 
-<h1>Logged In!</h1>
+<h1>Você já está logado!</h1>
 
 {% else %}
 
@@ -17,7 +15,7 @@
     
     <div class="mb-3">
       <!-- <label for="username1" class="form-label">Username or e-mail</label> -->
-      <input type="text" class="form-control" name="username" placeholder="Usuário ou e-mail" required>
+      <input type="text" class="form-control" name="username" placeholder="Email" required>
       <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
       <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
     </div>

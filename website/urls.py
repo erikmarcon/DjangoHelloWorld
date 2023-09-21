@@ -22,5 +22,9 @@ urlpatterns = [
     path('login/', views.login_user, name='login'),
     path('logout/', views.logout_user, name='logout'),
     path('register/', views.register_user, name='register'),
+    path('database', views.view_database, name='database'),
+    path('customer/<int:pk>', views.customer_record, name='customer'),
+    path('delete_customer/<int:pk>', views.delete_customer, name='delete'),
+    path('add_customer/', views.add_customer, name='add_customer'),
 ]
 
